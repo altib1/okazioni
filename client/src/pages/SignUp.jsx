@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
+import OAuth from '../components/OAuth'
 
 export default function SignUp() {
   const [formData, setFormData] = useState({})
@@ -43,7 +44,8 @@ export default function SignUp() {
         <input className='border-2 border-gray-300 rounded-md p-2 w-80 mb-3' id='password' onChange={handleChange} type='password' placeholder='Fjalekalimi' />
         <button disabled={loading} className='bg-slate-700 hover:opacity-95 disabled:opacity-80 text-white font-bold py-2 px-4 rounded uppercase'>
           {loading ? 'Duke u regjistruar...' : 'Regjistrohu'}
-          </button>
+        </button>
+        <OAuth  />
       </form>
       <div className='flex flex-row justify-center items-center gap-2 mt-5 text-center'>
         <p>Doni te identifikoheni ?</p>
